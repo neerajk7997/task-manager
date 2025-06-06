@@ -1,0 +1,13 @@
+<label for="priority-select">Filter by Priority:</label>
+<select id="priority-select" (change)="onPriorityChange($event)" [value]="selectedPriority">
+    <option value="">All</option>
+    <option value="LOW">Low</option>
+    <option value="MEDIUM">Medium</option>
+    <option value="HIGH">High</option>
+</select>
+
+<ul>
+    <li *ngFor="let task of tasks">
+        {{ task.title }} - {{ task.priority }} - Due: {{ task.dueDate }} - Completed: {{ task.completed }}
+    </li>
+</ul>
