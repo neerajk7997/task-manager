@@ -14,7 +14,7 @@ public class OverdueTaskNotifier implements RequestHandler<Object, String> {
     public String handleRequest(Object input, Context context) {
         try {
             String today = LocalDate.now().toString();
-            String urlStr = "https://your-api-url.com/api/v1/tasks?dueBefore=" + today + "&completed=false";
+            String urlStr = "https://api-url.com/api/v1/tasks?dueBefore=" + today + "&completed=false";
 
             URL url = new URL(urlStr);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
